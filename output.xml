@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.9.2 on win32)" generated="20210327 18:25:39.361" rpa="false" schemaversion="2">
+<suite id="s1" name="uploadImage" source="C:\Users\patchara_k\Desktop\lazada\testcases\uploadImage.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>https://www.google.co.th/imghp</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210327 18:25:39.866" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.co.th/imghp'.</msg>
+<status status="PASS" starttime="20210327 18:25:39.865" endtime="20210327 18:25:43.803"/>
+</kw>
+<test id="s1-t1" name="Open Popup">
+<kw name="Click Open Popup" library="keywordsUpload">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnUpload}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210327 18:25:43.807" level="INFO">Clicking element 'xpath=//span[@class="BwoPOe"]'.</msg>
+<status status="PASS" starttime="20210327 18:25:43.806" endtime="20210327 18:25:43.911"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href="about:invalid#zClosurez" and contains(.,"อัปโหลดภาพ")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210327 18:25:43.913" level="INFO">Clicking element 'xpath=//a[@href="about:invalid#zClosurez" and contains(.,"อัปโหลดภาพ")]'.</msg>
+<status status="PASS" starttime="20210327 18:25:43.911" endtime="20210327 18:25:43.977"/>
+</kw>
+<kw name="Normalize Path" library="OperatingSystem">
+<var>${imageNamePath}</var>
+<arg>${imageName}</arg>
+<doc>Normalizes the given path.</doc>
+<msg timestamp="20210327 18:25:43.979" level="INFO">${imageNamePath} = C:\Users\patchara_k\Desktop\lazada\resources\q.jpg</msg>
+<status status="PASS" starttime="20210327 18:25:43.978" endtime="20210327 18:25:43.979"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>id=awyMjb</arg>
+<arg>${imageNamePath}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20210327 18:25:43.980" level="INFO">Sending C:\Users\patchara_k\Desktop\lazada\resources\q.jpg to browser.</msg>
+<status status="PASS" starttime="20210327 18:25:43.979" endtime="20210327 18:25:47.033"/>
+</kw>
+<status status="PASS" starttime="20210327 18:25:43.805" endtime="20210327 18:25:47.033"/>
+</kw>
+<status status="PASS" starttime="20210327 18:25:43.803" endtime="20210327 18:25:47.034"/>
+</test>
+<status status="PASS" starttime="20210327 18:25:39.363" endtime="20210327 18:25:47.038"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="uploadImage">uploadImage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
